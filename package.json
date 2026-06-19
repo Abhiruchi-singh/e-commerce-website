@@ -8,12 +8,12 @@
     "dev:client": "npm run dev --prefix client",
     "dev:server": "npm run dev --prefix server",
     "build": "npm run build --prefix client",
-    "build:render": "npm run install:all && npm run download:images --prefix server && npm run build",
-    "start": "npm run build && cross-env NODE_ENV=production npm run start --prefix server",
-    "start:render": "cross-env NODE_ENV=production npm run start --prefix server",
+    "build:render": "npm install --include=dev && npm install --prefix client --include=dev && npm install --prefix server && npm run build",
+    "start": "npm run build && npm run start --prefix server",
+    "start:render": "npm run start --prefix server",
     "start:server": "npm run start --prefix server",
     "seed": "npm run seed --prefix server",
-    "install:all": "npm install && npm install --prefix client && npm install --prefix server"
+    "install:all": "npm install --include=dev && npm install --prefix client --include=dev && npm install --prefix server --include=dev"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
