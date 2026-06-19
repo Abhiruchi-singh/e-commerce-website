@@ -1,0 +1,11 @@
+1cb-ecommerce-main/
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+client/tsconfig.tsbuildinfo
+.env
+server/.env
+*.log
+.DS_Store
+Thumbs.db

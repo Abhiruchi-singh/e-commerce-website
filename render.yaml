@@ -1,0 +1,25 @@
+# Render Blueprint — puri MERN website ek service pe (frontend + backend)
+# Dashboard: New > Blueprint > GitHub repo connect karein
+
+services:
+  - type: web
+    name: ecommerce-mern-stack
+    runtime: node
+    plan: free
+    buildCommand: npm run build:render
+    startCommand: npm run start:render
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: USE_MEMORY_DB
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
